@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Portal CEEP </title>
+<style>
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: rgb(255, 255, 255);
+  font-size: 27px;
+
+}
+.secao {
+  background-color:#87CEFA;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-family:Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+.secao2 {
+  background-color:rgb(247, 49, 49);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+img {
+    height: 200px;
+    width: 300px;
+    display: inline-block;
+    margin: 8px;
+
+}
+        .login-container {
+            background: rgb(0, 98, 245);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba (0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #000000;
+        }
+        p {
+            margin-top: 10px;
+            color: #000000
+        }
+
+    
+</style>
+</head>
+<body>
+<center>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0MgDSMKl5yXEoSy3YYFkJRDCV9w6-lyHX9w&s" alt="CEEPPLG">
+</center>
+
+   <hr color="red">
+<center><h1> Portal <span style="color: rgb(0, 0, 146)">CE</span><span style="color: rgb(202, 0, 0)">E</span><span style="color: rgb(0, 0, 146)">P</span></h1> <p>
+    <hr color="blue">
+
+  <center>
+  <h4> O Centro Estadual de Educação Profissional Professora Lourdinha Guerra (CEEP) é uma instituição pública estadual que oferece Ensino Médio integrado à Educação Profissional, atendendo a estudantes que buscam formação técnica concomitante ao ensino regular.</h4>
+  </center>
+Oferecemos dois cursos: <br>
+<div class="info"> 
+<a href="forms.html"> Clique para saber mais </a> <br>
+</div>
+
+<hr>
+<div class="secao"> Infraestrutura </div>
+<p> </p>
+<div style="text-align: left; margin-left: 50px;">
+<h5>Laboratórios</h5>
+<ol>
+  <li>Laboratório de Física</li>
+  <li>Laboratório de Química</li>
+  <li>Laboratório de Biologia</li>
+  <li>Laboratório de Matemática</li>
+  <li>Laboratório de Linguagens</li>
+  <li>Laboratório de Ciências</li>
+  <li>Laboratório de Informática</li>
+</ol>
+<h5>Ambientes de Ensino e Apoio</h5>
+<ul>
+  <li>Sala de Educação Especial</li>
+  <li>Salas de aula climatizadas</li>
+  <li>Biblioteca</li>
+  <li>Refeitório</li>
+</ul>
+<h5>Espaços de Convivência e Atividades</h5>
+<ul>
+  <li>Pátio</li>
+  <li>Anfiteatro</li>
+  <li>Auditório</li>
+  <li>Quadra poliesportiva coberta</li>
+</ul>
+<h5>Acessibilidade</h5>
+<ul>
+  <li>Rampas e corrimãos</li>
+  <li>Pisos táteis</li>
+  <li>Sinalização visual</li>
+</ul>
+<h5>Outros</h5>
+<ul>
+  <li>Cursos técnicos integrados</li>
+  <li>Equipe pedagógica qualificada: <br>
+3 regentes; <br>
+2 Supervisoras de Pátio; <br>
+3 professores de Matemática;  <br>
+7 professores de Linguagens;  <br>
+6 professores de Base Técnica;  <br>
+4 professores de Ciências Humanas;  <br>
+7 professores da Educação Especial;  <br>
+6 professores de Ciências da Natureza;  <br>
+
+  <br> </li>
+</ul>
+</div>
+
+<div class="secao2"> Informações Gerais </div>
+
+<p>
+Telefone: (84) 3608-2669 <br>
+Horário de funcionamento: Segunda a sexta, das 7h30 às 17h. <br>
+Endereço: R. Antônio Lopes Chaves, 2-90 - Nova Parnamirim, Parnamirim - RN, 59150-570 <br>
+Matrícula somente pelo sigeduc: <br> <a href> https://matricula.sigeduc.rn.gov.br/home?fbclid=PAQ0xDSwLWRqZleHRuA2FlbQIxMQABp9Pxnn1Pqt--88X67Xh795vOjU9O3fDuHb7zTIZSjHbSUr22bIwBYNLUtTog_aem_W1bjPUUqpCtdAJQyRC5YTw </a>
+</p>
+<hr>
+ <div class="login-container">
+        <h1>Área Aluno</h1>
+        <form onsubmit="return validarLogin()">
+            <input type="text" id="usuario" placeholder="Usuário" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        <div class="mens" id="mensagem"> </div>
+
+        </form>
+    </div>
+    
+    <script>
+  function validarLogin() {
+    const usuario = document.getElementById("usuario").value;
+    const senha = document.getElementById("senha").value;
+    const mensagem = document.getElementById("mensagem");
+
+   
+    if (usuario == "admin" && senha == "1234") {
+      mensagem.style.color = "blue";
+      mensagem.textContent = "login autorizado.";
+
+      setTimeout(() => {
+        window.location.href = "forms.html";
+    }, 1000);
+      return false;
+    } else {
+      mensagem.style.color = "red";
+      mensagem.textContent = "Usuário ou senha incorretos. Tente novamente!";
+      return false;
+    }
+  }
+</script>
+</body>
+</html>
