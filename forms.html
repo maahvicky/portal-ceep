@@ -1,74 +1,135 @@
 <!DOCTYPE html>
-<html>
- <head>
- <title> Formulário CEEPPLG </title>
- <style>
- body {
- background-color: rgb(255, 255, 255);
- text-align: CENTER;
- font-family: system-ui, -apple-system,
-BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-'Open Sans', 'Helvetica Neue', sans-serif;
- 
- }
- #header {
- background-color: rgb(27, 81, 230);
- text-align: center;
- padding: 5px;
- border-bottom: 1px solid #a49eff;
- }
- #minhadiv {
- background-color: rgba(255, 9, 9, 0.199);
- width: 440px;
- height: 400px;
- float: center;
- }
- button {
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário CEEPPLG</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #header {
+      background-color: rgb(27, 81, 230);
+      color: white;
+      padding: 20px;
+      border-bottom: 1px solid #a49eff;
+    }
+
+    .minhadiv {
+      background-color: rgba(255, 9, 9, 0.15);
+      width: 480px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"], select {
+      width: 90%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    .radio-group {
+      margin-top: 10px;
+    }
+
+    button {
       background-color: #ac1e1e;
       color: white;
       padding: 12px;
       border: none;
-      width: 10%;
+      width: 80%;
       border-radius: 5px;
       cursor: pointer;
       font-size: 16px;
+      margin-top: 15px;
     }
 
     button:hover {
       background-color: #455aa0;
     }
-    </style>
-    <div class="minhadiv">
-    <center><h1> Formulário <span style="color: rgb(0, 0, 146)">CE</span><span style="color: rgb(202, 0, 0)">E</span><span style="color: rgb(0, 0, 146)">P</span></h1> <p>
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>
+      Formulário <span style="color: rgb(0, 0, 146)">CE</span><span style="color: rgb(202, 0, 0)">E</span><span style="color: rgb(0, 0, 146)">P</span>
+    </h1>
+  </div>
 
- <FORM METHOD="get" action="" name="cadastro">
- <label>Nome:</label> <input type="text"> <BR>
- <p> Escolha seu gênero:</p>
- <input type="radio" id="f" name="sexo" value="FEMININO">
- <label> Feminino </label>
- <input type="radio" id="M" name="sexo" value="MASCULINO">
- <label> Masculino </label> <BR>
-    <br>
- <LABEL> Qual sua formação?</LABEL> <br>
- <select name="serie" id="completa">
- <option value="Ensino fundamental completo;">
-Ensino fundamental completo</option> <br>
- <option value="Ensino fundamental incompleto"> Ensino fundamental incompleto
- </option> <br>
- <option value="Ensino médio completo">
-Ensino médio completo </option> <br>
- <option value="ensino médio incompleto"> Ensino médio incompleto </option>
- <option value=" Ensino superior completo">
- Ensino superior completo </option>
- <option value=" Ensino superior incompleto"> Ensino superior incompleto </option>
- <option value=" Outro...."> Outro.... </option>
+  <div class="minhadiv">
+    <form method="get" action="" name="cadastro">
+      <label>Nome completo:</label>
+      <input type="text" name="nome">
 
-</a>
- </select>
-</FORM>
-<a href="info.html"><button>Informática</button></a>
-<a href="redes.html"><button> Redes de Computadores</button></a>
+      <div class="radio-group">
+        <p>Escolha seu gênero:</p>
+        <input type="radio" id="f" name="sexo" value="Feminino">
+        <label for="f">Feminino</label>
+        <input type="radio" id="m" name="sexo" value="Masculino">
+        <label for="m">Masculino</label>
+      </div>
 
- </div>
- </body>
-</html>
+      <label>Escola de origem:</label>
+      <input type="text" name="escola_origem">
+
+      <label>Série que está cursando:</label>
+      <select name="serie">
+        <option value="">Selecione</option>
+        <option>6º ano</option>
+        <option>7º ano</option>
+        <option>8º ano</option>
+        <option>9º ano</option>
+        <option>1º ano EM</option>
+        <option>2º ano EM</option>
+        <option>3º ano EM</option>
+      </select>
+
+      <label>Turno que estuda:</label>
+      <select name="turno">
+        <option value="">Selecione</option>
+        <option>Manhã</option>
+        <option>Tarde</option>
+        <option>Noite</option>
+      </select>
+
+      <label>Você já conhecia o CEEP?</label>
+      <div class="radio-group">
+        <input type="radio" id="sim" name="conhecia" value="Sim">
+        <label for="sim">Sim</label>
+        <input type="radio" id="nao" name="conhecia" value="Não">
+        <label for="nao">Não</label>
+      </div>
+
+      <label>Qual sua formação?</label>
+      <select name="formacao">
+        <option value="">Selecione</option>
+        <option>Ensino fundamental completo</option>
+        <option>Ensino fundamental incompleto</option>
+        <option>Ensino médio completo</option>
+        <option>Ensino médio incompleto</option>
+        <option>Ensino superior completo</option>
+        <option>Ensino superior incompleto</option>
+        <option>Outro</option>
+      </select>
+
+      <br><br>
+      <a href="info.html"><button type="button">Informática</button></a>
+      <a href="redes.html"><button type="button">Redes de Computadores</button></a>
+    </form>
+  </div>
+</body>
+</html>  
